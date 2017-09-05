@@ -7,6 +7,7 @@
     <style>
       table, head{
         width:70%;
+        text-align: center;
       }
     </style>
   </head>
@@ -15,6 +16,49 @@
     {%   block content  %}
       {% include "exam2/header.html"  %}
     {%  endblock  %}
+
+    <h1>Welcome, {{me.name}}!</h1>
+    <h4>  people poked you ! </h4>
+
+    <div class="left">
+      {%for i in pokes%}
+      {% if i.poker_id != i.poked_id %}
+        {{i.poker_id}} poked you  times
+        {{count}}
+        {%endif%}
+        {% endfor %}
+    </div>
+<!-- ====================================== -->
+    <h4>People you may want to poke:</h4>
+    <div class="footer">
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Alias</th>
+            <th>Email_Address</th>
+            <th>Poke History</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for element in others %}
+          <tr>
+            <td>{{element.name}}</td>
+            <td>{{element.alias}}</td>
+            <td>{{element.email}}</td>
+            <td>{{element.total}} pokes</td>
+
+              <td><a href="/poke/{{poker.id}}">{{i}}Poke</a></td>
+
+          </tr>
+        </tbody>
+        {%  endfor %}
+      </table>
+
+      </form>
+
+    </div>
 
 
   </body>

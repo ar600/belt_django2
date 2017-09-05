@@ -4,6 +4,8 @@ urlpatterns = [
         url(r'^$', views.index) ,
         url(r'^register$', views.register) ,
         url(r'^login$', views.login) ,
+        url(r'^poke/(?P<id>\d+)$', views.poke) ,
+        # url(r'^login/(?P<id>\d+)$', views.poke) ,
         # url(r'^remove/(?P<id>\d+)$', views.remove) ,
         # url(r'^delete/(?P<id>\d+)$', views.delete) ,
         # url(r'^new$', views.show_new) ,

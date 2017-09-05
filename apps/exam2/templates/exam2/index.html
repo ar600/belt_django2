@@ -17,8 +17,8 @@
                 <label for="name">Name:</label>
                 <input type="text" name="name">
                 <br><br>
-                <label for="username">Username:</label>
-                <input type="text" name="username">
+                <label for="alis">Alias:</label>
+                <input type="text" name="alias">
                 <br>
                 <label for="email">Email:</label>
                 <input type="email" name="email">
@@ -41,10 +41,6 @@
             <h1>Login</h1>
             <form action="/login" method="post">
                 {% csrf_token%}
-
-                <label for="username">Username:</label>
-                <input type="text" name="username">
-                <br><br>
                 <label for="email">Email:</label>
                 <input type="email" name="email">
                 <br><br>
